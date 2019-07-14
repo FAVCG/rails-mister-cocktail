@@ -1,0 +1,30 @@
+<h1><%= @cocktail.name %></h1>
+
+<% if !@cocktail.doses.empty? %>
+  <h2>Doses:</h2>
+  <ul>
+    <% @cocktail.doses.each do |dose| %>
+      <li><%= dose.ingredient.name %> - <%= dose.description %> <%= link_to "Delete",
+      dose_path(dose), method: :delete, data: { confirm: "Are you sure?" } %> </li>
+    <% end %>
+  </ul>
+<% end %>
+
+<h2>Add another dose:</h2>
+<%= simple_form_for([@cocktail, @dose]) do |f| %>
+  <% if @dose.errors.any? %>
+    <div class="errors-container">
+      <ul>
+        <% @dose.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <%= f.input :description %>
+  <%= f.association :ingredient %>
+
+  <%= f.submit %>
+<% end %>
+<%= link_to "back", root_path %>

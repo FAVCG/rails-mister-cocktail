@@ -1,0 +1,20 @@
+<h1 class='text-center'>Cocktails</h1>
+
+<%= link_to "add new cocktail" , new_cocktail_path %>
+
+<div class="container">
+  <div class="row">
+    <% @cocktails.each do |cocktail| %>
+    <div class="col-xs-12 col-sm-6 col-md-3">
+      <div class="card" style="width: 18rem;">
+        <img src="<%= cl_image_path cocktail.photo %>" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title"><%= cocktail.name %></h5>
+
+          <a href="#"><%= link_to "Cocktail Info", cocktail_path(cocktail) %></a>
+        </div>
+      </div>
+    </div>
+    <% end %>
+  </div>
+</div>

@@ -1,0 +1,53 @@
+// Import page-specific CSS files here.
+@import "home";
+
+
+body {
+  background-color: black;
+  color:white;
+}
+
+#banner{
+  padding:100px ;
+  color: black;
+  background-size: cover;
+  height:500px;
+}
+
+#banner h1{
+  color: white;
+  text-align: center;
+}
+
+#banner p{
+  font-size: 30px;
+  font-weight: lighter;
+
+}
+
+
+.card {
+  padding: 15px;
+  text-align: center;
+  background-color: #e6c89f;
+}
+
+a:hover {
+  text-decoration: none;
+  color: white;
+  background-color: darkgray;
+}
+
+
+#footer  {
+  background: #421723;
+  color: white;
+  font-size: 20px;
+  padding: 0px;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  position:relative;
+  text-align: center;
+  height: 175px;
+}

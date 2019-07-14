@@ -4,12 +4,39 @@
     <title>RailsMisterCocktail</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
+ <div id="banner" style="background-image: url(https://images.pexels.com/photos/1283219/pexels-photo-1283219.jpeg?cs=srgb&dl=alcohol-bar-beer-1283219.jpg&fm=jpg);">
+    <h1>Old Fashioned Cocktails</h1>
+      <p></p>
+      <p>
+      </p>
+  </div>
+
+
+
     <%= yield %>
+    <%= javascript_include_tag "application" %>
+    <%= javascript_pack_tag "application" %>
   </body>
+
+  <div id="footer">
+ <p>Contact Me</p>
+  <ul class="list-inline">
+    <li><a href=""><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+    <li><a href=""><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+    <li><a href=""><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+    <li><a href=""><i class="fa fa-github" aria-hidden="true"></i></a></li>
+  </ul>
+</div>
+<script src="https://ajax.googleapis.com/ajax/lins/jquery/1.11.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
 </html>
